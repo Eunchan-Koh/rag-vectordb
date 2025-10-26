@@ -21,3 +21,7 @@ Understand full steps of the RAG.
 ## How was the accuracy?
 - it was around 72%. I've checked the reasonings and the answers provided by and to the llm, and realized that absolute 200 tokens per chunk is causing the problem. For example, if the sentence 'Alex's number was 100 and Jay's number was 923.' was divided into 'Alex's number was 100 and Jay's number' and 'was 923.', then if we search for Jay's number, the vector db will return the first sentence.
 - So to improve the accuracy of this method, better preprocessing steps will be needed, instead of using the magic number as the token number per chunk.
+
+## resource
+- I used sample pdfs and question lists from pixegami. The link to the source is here:
+- https://github.com/pixegami/simple-rag-pipeline
